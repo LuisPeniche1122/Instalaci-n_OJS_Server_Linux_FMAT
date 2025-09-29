@@ -88,7 +88,7 @@ Ejecuta el asistente de configuración segura:
 sudo mysql_secure_installation
 ```
 
-Responde lo siguiente:
+Se recomienda responder lo siguiente:
 
 * **Enter current password for root** → Enter
 * **Switch to unix_socket authentication?** → N
@@ -108,7 +108,7 @@ Ingresa a MariaDB como administrador:
 sudo mysql -u root -p
 ```
 
-Crea la base de datos y el usuario:
+Crea la base de datos y el usuario (reemplaza el ojsuser y TuPasswordSeguro123! por los datos que desees):
 
 ```sql
 CREATE DATABASE ojs;
@@ -207,12 +207,4 @@ En el instalador proporciona:
 * Usuario de base de datos: `ojsuser`
 * Contraseña: la definida en el paso 2
 
-Al finalizar, podrás acceder como administrador y empezar a configurar tu revista 🎉.
-
-```
-
----
-
-👉 Te sugiero que uses este archivo como `README.md` en tu repositorio.  
-¿Quieres que además te prepare un **script `install_ojs.sh`** con todos los comandos automatizados para que el repo tenga más valor?
-```
+Al finalizar, podrás acceder como administrador y empezar a configurar tu revista.
