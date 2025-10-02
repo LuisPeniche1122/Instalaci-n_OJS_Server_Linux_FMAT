@@ -57,3 +57,42 @@ Si necesitas cambios más profundos:
 - Puedes modificar CSS/LESS para personalizar estilos.  
 
 Ejemplo de estructura de un tema:
+```
+plugins/themes/mi-tema/
+├── index.php
+├── MiTemaPlugin.inc.php
+├── version.xml
+├── styles/
+│ ├── index.less
+│ ├── variables.less
+│ └── structure.less
+└── locale/
+```
+
+---
+
+### 4. **Crear un tema personalizado**
+La mejor práctica es crear un **tema hijo** a partir de uno existente.  
+De esta forma, solo modificas lo necesario y mantienes compatibilidad con futuras actualizaciones.
+
+📖 Guía oficial: [Theme Setup & Configuration](https://docs.pkp.sfu.ca/pkp-theming-guide/en/theme-setup)
+
+---
+
+## Buenas prácticas
+
+- Evita modificar directamente los archivos de un tema oficial → usa un **tema hijo**.  
+- Borra la caché de plantillas después de hacer cambios:  
+  **Administración → Mantenimiento → Limpiar caché**.  
+- Verifica que el tema sea compatible con tu versión de OJS.  
+- Usa control de versiones (GitHub) para mantener registro de tus modificaciones.  
+
+---
+
+## Recursos útiles
+
+- [Guía oficial de PKP: Theming Guide](https://docs.pkp.sfu.ca/pkp-theming-guide/en/)  
+- [Theme Setup & Configuration](https://docs.pkp.sfu.ca/pkp-theming-guide/en/theme-setup)  
+- [Default Theme](https://docs.pkp.sfu.ca/pkp-theming-guide/en/theme-default)  
+
+---
