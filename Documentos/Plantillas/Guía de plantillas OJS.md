@@ -85,7 +85,6 @@ De esta forma, solo modificas lo necesario y mantienes compatibilidad con futura
 - Borra la caché de plantillas después de hacer cambios:  
   **Administración → Mantenimiento → Limpiar caché**.  
 - Verifica que el tema sea compatible con tu versión de OJS.  
-- Usa control de versiones (GitHub) para mantener registro de tus modificaciones.  
 
 ---
 
