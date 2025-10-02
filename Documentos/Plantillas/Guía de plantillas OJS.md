@@ -1,40 +1,59 @@
-## Personalización de la interfaz en OJS
+# Personalización de la interfaz en OJS (Temas y Plantillas)
 
-La interfaz que los usuarios verán en OJS (lectores, autores, revisores, editores) **no se construye desde cero**, sino que se gestiona mediante **temas y plantillas**.
+En OJS, la interfaz visible para los usuarios (lectores, autores, revisores) no se construye desde cero.  
+El sistema utiliza **temas** (plantillas) que definen la apariencia y la estructura de las páginas.  
 
-### ¿Qué es una plantilla en OJS?
-Una **plantilla en OJS** es un archivo que define cómo se muestra la información en la interfaz del usuario.  
-Por ejemplo:
-- Una plantilla para la **página principal** de la revista.
-- Otra plantilla para la **vista de un artículo**.
-- Otra para la **lista de números publicados**.
+Con estos temas se pueden realizar personalizaciones básicas o desarrollar un diseño propio más avanzado.
 
-Estas plantillas son interpretadas por Smarty y combinadas con los datos guardados en la base de datos (artículos, usuarios, configuraciones) para generar las páginas web que ven los usuarios.
+---
 
-### Opciones de personalización
+## ¿Qué es un tema en OJS?
 
-1. **Temas predefinidos**
-   - OJS incluye varios temas listos para usar (ejemplo: *Default Theme*, *Bootstrap 3 Theme*).
-   - Se activan desde el panel de administración:
-     ```
-     Administración → Apariencia → Temas
-     ```
-   - Permiten cambiar colores, tipografías y estilos básicos.
+Un **tema** es un plugin que controla el diseño de la revista. Incluye:
 
-2. **Configuración básica**
-   - Desde el panel de administración también es posible:
-     - Subir el **logo de la revista**.
-     - Modificar los **colores principales**.
-     - Configurar el **menú de navegación**.
-     - Personalizar encabezado y pie de página.
+- Plantillas HTML/Smarty → definen la estructura de las páginas.  
+- Estilos CSS/LESS → controlan los colores, fuentes y distribución.  
+- Archivos de recursos → imágenes, scripts, traducciones.  
+- Configuración del tema → metadatos como nombre, versión y compatibilidad.  
 
-3. **Plantillas (Smarty)**
-   - OJS utiliza el motor de plantillas **Smarty**.
-   - Las plantillas son archivos `.tpl` que definen la estructura de cada página.
-   - Editando estas plantillas se pueden hacer cambios profundos en el diseño.
-   - Requiere conocimientos de **HTML, CSS, PHP y Smarty**.
+Cuando activas un tema en OJS, la revista usará sus plantillas y estilos para mostrar el sitio público.
 
-4. **Temas personalizados**
-   - Es posible crear un **tema propio** en forma de plugin.
-   - Esto permite un diseño único sin modificar el núcleo del sistema.
-   - La recomendación es copiar un tema existente y modificarlo como base.
+---
+
+## Tipos de personalización
+
+### 1. **Usar temas preinstalados**
+OJS incluye temas predeterminados que puedes activar desde  
+**Panel de administración → Apariencia → Temas**.  
+
+Ejemplos de temas disponibles:  
+- Default Theme  
+- Bootstrap 3  
+- Classic  
+- Health Sciences  
+- Immersion  
+- Pragma  
+- Manuscript  
+
+📖 Ver más en la [lista de temas de OJS](https://docs.pkp.sfu.ca/pkp-theming-guide/en/themes).
+
+---
+
+### 2. **Configuración sin código**
+Desde el panel de administración puedes modificar:  
+- Logo de la revista.  
+- Colores principales y tipografía.  
+- Menús de navegación.  
+- Encabezado, pie de página y bloques laterales.  
+
+Estas opciones permiten adaptar OJS a la identidad institucional sin programar.
+
+---
+
+### 3. **Editar plantillas y estilos**
+Si necesitas cambios más profundos:  
+- OJS usa **Smarty** como motor de plantillas (`.tpl`).  
+- Los archivos de temas se encuentran en `plugins/themes/`.  
+- Puedes modificar CSS/LESS para personalizar estilos.  
+
+Ejemplo de estructura de un tema:
